@@ -1,0 +1,408 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery.bxslider.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script>
+       var element = $('#frist');
+
+       element.mouseover(function () {
+
+           element.toggleClass('flipInX animated');
+
+           element.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function (e) {
+
+               $(e.target).removeClass('flipInX animated');
+
+           });
+
+       });
+       $(function () {
+           $("#dialog").dialog({
+               autoOpen: false,
+               height: 400,
+               width: 400,
+              modal:true
+
+           });
+
+           $(".op1").on("click", function () {
+               $("#dialog").dialog("open");
+           });
+       });
+       $(function () {
+           $("#dil1").dialog({
+               autoOpen: false,
+               height: 400,
+               width: 400,
+               modal: true
+
+           });
+
+           $(".ang").on("click", function () {
+               $("#dil1").dialog("open");
+           });
+       });
+       $(function () {
+           $("#dil2").dialog({
+               autoOpen: false,
+               height: 400,
+               width: 400,
+               modal: true
+
+           });
+
+           $(".offer").on("click", function () {
+               $("#dil2").dialog("open");
+           });
+       });
+       $(function () {
+           $("#tweet").hide();
+
+           $(".g").on("click", function () {
+               $("#tweet").show(500,call1);
+           });
+           function call1() {
+               setTimeout(function () {
+                   $("#tweet:visible").removeAttr("style").fadeOut();
+               }, 1000);
+           };
+       });
+       $(function () {
+           $("#slide").on({
+               mouseenter: function () {
+                   $(this).slideUp(2000);
+               },
+               mouseleave: function () {
+                   $(this).slideDown(2000);
+               }
+           });
+       });
+       $(function () {
+           $(".panel-body").on({
+               mouseenter: function () {
+                   $(this).css("background-color", "chartreuse");
+               },
+               mouseleave: function () {
+                   $(this).css("background-color", "blanchedalmond");
+               }
+           });
+       });
+       //$(function () {
+       //    $("#sad").hide();
+
+       //    $(".ang").on("click", function () {
+       //        $("#sad").show(500, call1);
+       //    });
+       //    function call1() {
+       //        setTimeout(function () {
+       //            $("#sad:visible").removeAttr("style").fadeOut();
+       //        }, 1000);
+       //    };
+       //});
+       //$(function () {
+       //    $("#of").hide();
+
+       //    $(".offer").on("click", function () {
+       //        $("#of").show(500, call1);
+       //    });
+       //    function call1() {
+       //        setTimeout(function () {
+       //            $("#of:visible").removeAttr("style").fadeOut();
+       //        }, 1000);
+       //    };
+       //});
+       var audioElement = document.createElement('audio');
+       audioElement.setAttribute('src', 'http://www.soundjay.com/misc/sounds/bell-ringing-01.mp3');
+
+       audioElement.addEventListener('ended', function () {
+           this.play();
+       }, false);
+       $(function () {
+           $("#baby").hide();
+           $("#bab").hide();
+           $(".h").on("click", function () {
+               
+               $("#baby").show(500, call2);
+               au.play();
+             
+           });
+           function call2() {
+               setTimeout(function () {
+                   $("#baby:visible").removeAttr("style").fadeOut();
+               }, 1000);
+           };
+       });
+       $(function () {
+           $("#accordion").accordion({
+               collapsible: true
+           });
+          
+           $(function () {
+               $("#m1").hide();
+           });
+           $(".q").on("click", function () {
+               $("#m1").show(500,callback)
+           });
+           function callback() {
+               setTimeout(function () {
+                   $("#m1:visible").removeAttr("style").fadeOut();
+               }, 1000);
+           };
+
+       });
+      
+      
+      
+    </script>
+     <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+      background-color:antiquewhite;
+    }
+         .jumbotron {
+      margin-bottom: 0;
+    }
+
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: 450px;
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            padding-top: 20px;
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron">
+        <div id="slide" class="container text-center">
+            <img src="Images/images.jpg" class="img-circle" alt="Cinque Terre" width="250" height="236" />
+            <img src="Images/maxresdefault (1).jpg" class="img-circle" alt="Cinque Terre" width="250" height="236" />
+            <img src="Images/maxresdefault.jpg" class="img-circle" alt="Cinque Terre" width="250" height="236"/>
+
+            <img src="New folder/Images/download.jpg"class="img-circle" alt="Cinque Terre" width="250" height="236" />
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <div class="col-sm-3 sidenav"style="height:800px">
+                <div id="accordion">
+                    <h3>Apologise</h3>
+                    <div>
+                        <video controls="controls" style="width:200px;height:200px">
+                            <source src="New%20folder/A%20is%20for%20Albert_19.mp4" type="video/mp4" />
+                            <source src="New%20folder/A%20is%20for%20Albert_19.ogv" type="video/mp4" />
+                        </video>
+                    </div>
+                    <h3>Greeting</h3>
+                    <div>
+                        <video controls="controls"style="width:200px;height:200px">
+                            <source src="New%20folder/A%20is%20for%20Albert_10.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <h3>Request</h3>
+                    <div>
+  <video controls="controls"style="width:200px;height:200px">
+                            <source src="New%20folder/A%20is%20for%20Albert_11.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <h3>Happy</h3>
+                    <div>
+                        <video controls="controls"style="width:200px;height:200px">
+                            <source src="New%20folder/A%20is%20for%20Albert_12.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <h3>Anger</h3>
+                    <div>
+                        <video controls="controls"style="width:200px;height:200px">
+                            <source src="New%20folder/A%20is%20for%20Albert_13.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <h3>Making an offer</h3>
+                    <div>
+                        <video controls="controls"style="width:200px;height:200px">
+                            <source src="New%20folder/A%20is%20for%20Albert_14.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9 text-left">
+                <div id="hap" class="row">
+                    <div class="col-sm-3">
+                        <img id="baby" src="Images/download baby.jpg" class="img-rounded" alt="Cinque Terre" width="300" height="236" style="margin-bottom:0" />
+                        <audio id="bab" controls="controls">
+                            <source src="Images/audio.mp3" type="audio/mpeg" />
+                        </audio>
+                         <div class="panel panel-success">
+                            
+                            <div class="panel-heading">Happy</div>
+                            <div class="panel-body"><a class="h" href="#">jump for joy</a></div>
+                            <div class="panel-body"><a class="h" href="#">On cloud nine</a></div>
+                            <div class="panel-body"><a class="h" href="#">On top of the world</a></div>
+                            <div class="panel-body"><a class="h" href="#">Happy as a clam</a></div>
+                            <div class="panel-body"><a class="h" href="#"> Having a whale of a time</a></div>
+
+                            <div class="panel-footer">View More</div>
+                        </div>
+           
+                    </div>
+                    <div class="col-sm-3">
+            <img id="tweet" src="Images/tweety-wishes-good-morning-its-saturday-glitter.gif" class="img-rounded" alt="Cinque Terre" />
+   
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">Greetings</div>
+                          
+                            <div class="panel-body"><a class="g" href="#">Good morning</a></div>
+                            <div class="panel-body"><a class="g" href="#">Good afternoon</a></div>
+                            <div class="panel-body"><a class="g" href="#">Good evening</a></div>
+                            <div class="panel-body"><a class="g" href="#">How are you?</a></div>
+                            <div class="panel-body"><a class="g" href="#">How do you do?</a></div>
+
+                            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+                        </div>
+
+                    </div>
+                  
+                    <div class="col-sm-3">
+          <img id="m1" 
+       src="Images/24226681-Illustration-of-a-Young-African-American-Boy-with-His-Hands-Clasped-Together-in-Request-Stock-Illustration.jpg"class="img-rounded" alt="Cinque Terre" width="300" height="236" />
+                        <div class="panel panel-success">
+                            <div class="panel-heading">Request</div>
+                            <div class="panel-body">
+                                <a class="q" href="#">Could you</a></div>
+                                <div class="panel-body"><a class="q" href="#">Can I request...?</a></div>
+                              <div class="panel-body"><a class="q" href="#">would you mind</a></div>
+                                  <div class="panel-body">
+                                      <a class="q" href="#"> I'd like to request...</a>
+
+                                  </div>
+                            <div class="panel-body">
+                                <a class="q" href="#">If you're not too busy,</a>
+
+                            </div>
+                            <div class="panel-footer">View More</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div data-anijs="if: mouseover, do: flipInX animated">
+
+                            <div id="frist" class="panel panel-danger flipInX animated">
+
+                                <div class="panel-heading">Apologise</div>
+                                <div id="dialog">
+                                    <img src="Images/stock-vector-man-apologizes-to-women-because-he-driving-to-crash-with-her-car-449502820.jpg" />
+                                </div>
+                                <div class="panel-body"><a class="op1" href="#">I'm very sorry</a></div>
+                                <div class="panel-body"><a class="op1" href="#">I'm terribly sorry</a></div>
+                                <div class="panel-body"><a class="op1" href="#">Ever so sorry</a></div>
+                                <div class="panel-body"><a class="op1" href="#">How thougthless of me</a></div>
+                                <div class="panel-body"><a class="op1" href="#">Pardon me</a></div>
+
+                                <div class="panel-footer"style="border-left-color:blanchedalmond">view more</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div id="dil1">
+                            <img id="sad" src="Images/download sad).jpg"  />
+                        </div>
+                             <div class="panel panel-danger">
+                            <div class="panel-heading">Anger</div>
+                            <div class="panel-body"><a class="ang" href="#">To be up in arms</a></div>
+                            <div class="panel-body"><a class="ang" href="#">For crying out load</a></div>
+                            <div class="panel-body"><a class="ang" href="#">Please cut it out</a></div>
+                            <div class="panel-body"><a class="ang" href="#">I'LL skin your alive</a></div>
+                            <div class="panel-body"><a class="ang" href="#"> short fuse</a></div>
+
+                            <div class="panel-footer">View More</div>
+                        </div>
+                    </div>
+                    <div id="dil2"style="align-content:center">
+              <img id="of" src="Images/images (1).jpg"  />
+                     </div>
+                    <div class="col-sm-3">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">Making an offer</div>
+                            <div class="panel-body"><a class="offer" href="#">May i halp you?</a></div>
+                            <div class="panel-body"><a class="offer" href="#">shall i shut the door</a></div>
+                            <div class="panel-body"><a class="offer" href="#">shall i shut the door</a></div>
+                            <div class="panel-body"><a class="offer" href="#">Come to my place</a></div>
+                            <div class="panel-body"><a class="offer" href="#">Do help yoursalf</a></div>
+
+                            <div class="panel-footer">View More</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+        <p>Footer Text</p>
+    </footer>
+
+</body>
+</html>

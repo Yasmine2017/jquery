@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="http://code.jquery/js/jquery-1.4.4.min.js"></script>
+    <script src="Scripts/jquery-1.10.1.min.js"></script>
+    <script src="Scripts/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="Scripts/jquery.easing.1.3.js"></script>
+
+   <script>
+       var r, s=0;
+       $(function () {
+           $("#a").click(function () {
+               $("#a").slideToggle(2000);
+               $("#ap").slideToggle(2000);
+           });
+       });
+       $(function () {
+           $("#x").click(function () {
+               $("#x").slideUp(2000);
+               $("#xl").animate({ top: '-100px' }, 2000);
+               $("#x").slideDown(2000);
+           });
+       });
+       $(function () {
+           $(".img-rounded,.tp,.rgh,.fin").draggable({ revert: "invalid" });
+           $("#droppable").droppable({
+               classes: {
+                   "ui-droppable-active": "ui-state-active",
+                   "ui-droppable-hover": "ui-state-hover"
+               },
+               drop: function (event, ui) {
+                   $(this)
+                     .addClass("ui-state-highlight")
+                     .find("p")
+                       .html("Dropped!");
+               }
+           });
+       });
+       $(function () {
+           $("#b").click(function () {
+               $("#ba").animate({ top: '200px' }, 500);
+           });
+       });
+       $(function () {
+           $("#c").click(function () {
+               $({ s: 0, r: 0 }).animate({
+                   s: 2,
+                   r: 360
+               },
+               {
+                   duration: 3000,
+                   step: function (now, fx) {
+
+                       if (fx.prop == 's')
+                           s = now;
+                       else if (fx.prop == 'r')
+                           r = now;
+                       $('#ca').css('transform', 'scale(' + s + ',' + s + ')rotate(' + r + 'deg)');
+
+                   }
+               });
+           });
+       });
+       $(function () {
+           $("#c").dblclick(function () {
+               $("#ca").animate({ left: '350px' });
+           });
+       });
+       $(function () {
+           $("#d").click(function () {
+               $({ t: 0 }).animate({
+                 t: 2
+                   
+               },
+               {
+                   duration: 3000,
+                   step: function () {
+            $('#do').css('transform', 'scale(' + arguments[0] + ',' + arguments[0] + ')');
+                   }
+
+               });
+           });
+         
+       });
+       $(function () {
+           $("#d").dblclick(function () {
+               $("#do").animate({top:'-300px'});
+               });
+       });
+       $(function () {
+           $("#e").click(function () {
+               $("#ele").animate({
+                   left: '400px'
+               },
+                {
+                    duration: 2000,
+                    step: function (l, t) {
+                      
+                        if (t.pos > 0.9)
+                            $(this).stop();
+
+                    }
+                });
+           });
+       });
+       $(function () {
+           $("#f").click(function () {
+               $("#fan").slideUp(2000);
+           });
+       });
+       $(function(){
+           $("#f").dblclick(function () {
+               $("#fan").slideDown(2000);
+           });
+       });
+       $(function () {
+           $("#n").click(function () {
+               $("#nest")
+              .slideUp(2000)
+               .show("shake",
+                      { direction: "horizontal" }, 1000);
+                
+           });
+       });
+       $(function () {
+           $("#p").click(function () {
+               $("#pan")
+               .animate({ top: '-100px' })
+               .hide("shake", { direction: "horizontal" }, 1000);
+           });
+       });
+       $(function () {
+           $("#p").dblclick(function () {
+               $("#pan").show("shake",
+                      { direction: "horizontal" }, 1000);
+           });
+       });
+       $(function () {
+           $("#i").click(function () {
+               $("#ice").animate({ top: '-100px', left: '100px' }, 5000);
+           });
+       });
+       $(function () {
+           $("#tt").click(function () {
+               $("#tu").animate({ left: '150px' },5000
+                
+                );
+           });
+       });
+       $(function () {
+           $("#q").click(function () {
+               $("#q").slideDown(2000);
+               $("#quest")
+               .animate({ tap: '-100px' }, 5000)
+               .animate({ left: '-100px' }, 5000);
+           });
+       });
+       $(function () {
+           $("#m").click(function () {
+               $("#map")
+               .animate({ top: '-100px' }, 5000)
+               .animate({ left: '-100px' }, 5000);
+           });
+       });
+       $(function () {
+           $("#z").click(function () {
+               $("#zeb")
+                .animate({ left: '-50px' }, 5000)
+                .animate({ top: '-100px' }, 5000)
+                .animate({ left: '200px' }, 5000);
+
+           });
+       });
+       $(function () {
+           $("#y").click(function () {
+               $("#yach").animate({  left: '50px',top:'-50px' }, 5000);
+           });
+       });
+       $(function () {
+           $("#o").click(function () {
+               $("#orang").animate({ left: '100px',top:'-400px' }, 5000);
+           });
+       });
+       $(function () {
+           $("#g").click(function () {
+               $("#grp").animate({ left: '100px', top: '-400px' }, 5000)
+                 .hide("shake",
+                      { direction: "horizontal" }, 1000);
+           });
+       });
+       $(function () {
+           $("#g").mouseleave(function () {
+               $("#grp").show("shake",
+                      { direction: "horizontal" }, 1000);
+           });
+       });
+       $(function () {
+           $("#j").click(function () {
+               $("#juic").animate({ top: '-250px', left: '-250px' }, 5000)
+               .animate({ top: '-40px' }, 2000);
+           });
+       });
+       $(function () {
+           $("#w").click(function () {
+               $("#wind").animate({ top: '-200px', left: '-250px' }, 5000)
+               .animate({ top: '-80px' }, 2000);
+           });
+       });
+       $(function () {
+           $("#h").click(function () {
+               $("#hat").animate({ top: '-100px', left: '-100px' }, 5000);
+           });
+       });
+       $(function () {
+           $("#v").click(function () {
+               $("#vest").animate({ top: '-300px' }, 5000)
+               .hide("shake",
+                      { direction: "horizontal" }, 1000);
+           });
+       });
+       $(function () {
+           $("#v").mouseleave(function () {
+               $("#vest").show("shake",
+                      { direction: "horizontal" }, 1000);
+           });
+       });
+       $(document).ready(function () {
+           $('#bas')
+               .hide(5000)
+                .show(5000)
+                .animate({ right: '500px' }, 5000)
+                .queue(function () {
+                    $(this).dequeue()
+                })
+            .delay(2000)
+                .animate({ right: '-=300px' }, 5000);
+       });
+   </script>
+     <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            background-color:lightgoldenrodyellow;
+        }
+         .bs {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 0;
+            margin-right:0;
+        }
+         .tp {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 100px;
+           left: 200px;
+           margin-top:200px;
+
+        }
+          .fin {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 100px;
+           left: 800px;
+           margin-top:200px;
+
+        }
+         .rgh {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 100px;
+           left: 500px;
+           margin-top:200px;
+
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: 450px;
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            padding-top: 20px;
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+        /*.tp{
+            margin-top:250px;
+            width:80px;
+            height:80px;
+        }*/
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+              .jumbotron {
+      margin-bottom: 0;
+      background-color:hotpink;
+    }
+
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron" style="background-color:hotpink">
+        <div class="container text-center"style="background-color:hotpink">
+            <img id="bas"class="bs" src="Images/bus.png" />
+        </div>
+    </div>
+    <nav class="navbar navbar-inverse">
+
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+              
+                <a class="navbar-brand" href="#">Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li ><a href="JS/jQuery%20Project/Home.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <div id="droppable"  class="col-sm-2 sidenav" style="background-color:yellowgreen">
+                
+            </div>
+            <div class="col-sm-10 text-left">
+
+                <img id="a" src="Images/A.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" />
+       <img id="b" src="Images/B.jpg" class="img-rounded" alt="Cinque Terre" width="45" height="50" />
+                <img id="c" src="Images/C.jpg"  class="img-rounded" alt="Cinque Terre" width="40" height="50"/>
+                <img id="d" src="Images/D.jpg"  class="img-rounded" alt="Cinque Terre" width="50" height="50"/>
+           <img id="e" src="Images/E.jpg"  class="img-rounded" alt="Cinque Terre" width="50" height="50"/>
+                <img id="f" src="Images/F.jpg" class="img-rounded" alt="Cinque Terre" width="45" height="50"/>
+                <img id="g" src="Images/g.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50"/>
+                <img id="h" src="Images/h.png" class="img-rounded" alt="Cinque Terre" width="50" height="50"/>
+             <img id="i" src="Images/i.jpg" class="img-rounded" alt="Cinque Terre" width="45" height="50"/>
+                <img id="j" src="Images/J.jpg" class="img-rounded" alt="Cinque Terre" width="45" height="50"/>
+           <img id="k" src="Images/k.png" class="img-rounded" alt="Cinque Terre" width="50" height="50"/>
+                <img id="l" src="Images/L.png" class="img-rounded" alt="Cinque Terre" width="45" height="50"/>
+        <img id="m" src="Images/m.jpg"class="img-rounded" alt="Cinque Terre" width="50" height="50" />
+         <img id="n" src="Images/N.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50"/>
+       <img id="o" src="Images/o.jpg"class="img-rounded" alt="Cinque Terre" width="50" height="50" />
+      <img id="p" src="Images/p.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50"/>
+       <img id="q" src="Images/q.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50"/>
+         <img src="Images/R.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50"/>
+      <img src="Images/S.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50"/>
+     <img id="tt" src="Images/t.jpg"class="img-rounded" alt="Cinque Terre" width="50" height="50" />
+     <img src="Images/u.png"class="img-rounded" alt="Cinque Terre" width="40" height="50" />
+     <img id="v" src="Images/v.jpg"class="img-rounded" alt="Cinque Terre" width="50" height="50" />
+   <img id="w" src="Images/w.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50"/>
+                <img id="x" src="Images/x.png" class="img-rounded" alt="Cinque Terre" width="40" height="50"/>
+                <img id="y" src="Images/y.png"class="img-rounded" alt="Cinque Terre" width="40" height="50" />
+                <img id="z" src="Images/z.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50"/>
+                <img id="ca"class="tp" src="Images/cat.jpg" />
+                <img id="ap" class="tp" src="Images/apple.jpg"  />
+                <img id="do"class="tp" src="Images/dog.jpg" />
+                <img id="ba"class="tp" src="Images/ball.jpg" />
+                <img id="ele"class="tp" src="Images/eleph.jpg" />
+                <img id="map"class="tp" src="Images/map.png" />
+                <img id="fan"class="tp" src="Images/fan.jpg" />
+                <img id="tu" class="rgh" src="Images/tur.png" />
+                <img id="grp"class="rgh" src="Images/grap.png" />
+                <img id="hat"class="rgh" src="Images/hat.jpg" />
+                <img id="juic"class="rgh" src="Images/juice.jpg" />
+                <img id="orang"class="rgh" src="Images/orang.jpg" />
+                <img id="pan"class="rgh" src="Images/pan.png" />
+                <img id="ice"class="rgh" src="Images/ice.jpg" />
+                <img id="quest"class="rgh" src="Images/quest.png" />
+                <img id="zeb"class="fin" src="Images/zeb.jpg" />
+                <img id="xl"class="fin" src="Images/xle.png" />
+                <img id="yach"class="fin" src="Images/yacht.jpg" />
+                <img id="wind"class="fin" src="Images/win.jpg" />
+                <img id="vest"class="fin" src="Images/vest.jpg" />
+                <img id="nest"class="fin" src="Images/nest.png" />
+             </div>
+        </div>
+    </div>
+    <footer class="container-fluid text-center">
+        <p>Footer Text</p>
+    </footer>
+
+</body>
+</html>

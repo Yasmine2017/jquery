@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="StyleSheet.css" rel="stylesheet" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+     <script>
+       var element = $('#frist');
+
+       element.mouseover(function () {
+
+           element.toggleClass('flipInX animated');
+ 
+           element.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function (e) {
+
+               $(e.target).removeClass('flipInX animated');
+
+           });
+
+       });
+       $(function () {
+           $("#dialog").dialog({
+               autoOpen: false,
+               height: 400,
+               width: 350,
+              modal:true
+              
+           });
+
+           $("#op1").on("click", function () {
+               $("#dialog").dialog("open");
+           });
+       });
+   </script>
+     <style>
+        /* Remove the navbar's default rounded borders and increase the bottom margin */
+        .navbar {
+            margin-bottom: 50px;
+            border-radius: 0;
+        }
+
+        /* Remove the jumbotron's default bottom margin */
+        .jumbotron {
+            margin-bottom: 0;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+    </style>
+    </head > 
+<body >
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Deals</a></li>
+                    <li><a href="#">Stores</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div id="accordion">
+                    <h3>Section 1</h3>
+                    <div>
+                        <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                    </div>
+                    <h3>Section 2</h3>
+                    <div>
+                        <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+                    </div>
+                    <h3>Section 3</h3>
+                    <div>
+                        <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+                        <ul>
+                            <li>List item one</li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                        </ul>
+                    </div>
+                    <h3>Section 4</h3>
+                    <div>
+                        <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-sm-3">
+                <div data-anijs="if: mouseover, do: flipInX animated">
+
+                    <div id="frist" class="panel panel-primary flipInX animated">
+
+                        <div class="panel-heading">Apologise</div>
+                        <div id="dialog" >
+                       <img src="Images/stock-vector-man-apologizes-to-women-because-he-driving-to-crash-with-her-car-449502820.jpg" />
+                        </div>
+                            <div class="panel-body"><a id="op1" href="#">I'm very sorry</a></div>
+                        <div class="panel-body"><a id="op1" href="#">I'm terribly sorry</a></div>
+                        <div class="panel-body"><a id="op1" href="#">Ever so sorry</a></div>
+                        <div class="panel-body"><a id="op1" href="#">How thougthless of me</a></div>
+                        <div class="panel-body"><a id="op1" href="#">Pardon me</a></div>
+
+                         <div class="panel-footer">view more</div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">Greetings</div>
+                    <div class="panel-body"><a id="g" href="#">Good morning</a></div>
+
+                    <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading">BLACK FRIDAY DEAL</div>
+                    <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+                    <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+      
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+                        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+                        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+                        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+                        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+                        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+                        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+    <br><br>
+
+    <footer class="container-fluid text-center">
+        <p>Online Store Copyright</p>
+        <form class="form-inline">
+            Get deals:
+            <input type="email" class="form-control" size="50" placeholder="Email Address">
+            <button type="button" class="btn btn-danger">Sign Up</button>
+        </form>
+    </footer>
+    
+     </body >
+ </html >
+        
